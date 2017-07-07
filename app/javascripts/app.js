@@ -7,7 +7,7 @@ import { default as contract } from 'truffle-contract'
 
 import crowdfund_artifacts from '../../build/contracts/Crowdfund.json'
 
-var crowdfund = contract(crowdfund_artifacts);
+var Crowdfund = contract(crowdfund_artifacts);
 
 // The following code is simple to show off interacting with your contracts.
 // As your needs grow you will likely need to change its form and structure.
@@ -18,6 +18,8 @@ var account;
 window.App = {
   start: function() {
     var self = this;
+
+    Crowdfund.setProvider(web3.currentProvider);
 
   },
 
