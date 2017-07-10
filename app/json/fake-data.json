@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Mammoth Ski Trip 2018",
+    "description": "Funding for our annual ski trip!",
+    "fundingCurrency": "USD",
+    "fundingGoal": "2000",
+    "amount": "0",
+    "endDate": "1518307200",
+    "numOfFunders": "0",
+    "active": true
+  },
+  {
+    "name": "Matt's Wild Santa Cruz Surf Competition",
+    "description": "Surf Competition prize money",
+    "fundingCurrency": "ETH",
+    "fundingGoal": "50",
+    "amount": "0",
+    "endDate": "1527811200",
+    "numOfFunders": "0",
+    "active": true
+  },
+  {
+    "name": "Dodgers Playoff Ticket Fundraiser",
+    "description": "Send me to the 2017 playoffs!",
+    "fundingCurrency": "ETH",
+    "fundingGoal": "2",
+    "amount": "0",
+    "endDate": "1504224000",
+    "numOfFunders": "0",
+    "active": true
+  },
+  {
+    "name": "Ethereum for Ester",
+    "description": "Raise money for Ester Mann's cancer treatments!",
+    "fundingCurrency": "ETH",
+    "fundingGoal": "10",
+    "amount": "0",
+    "endDate": "1514764800",
+    "numOfFunders": "0",
+    "active": true
+  },
+  {
+    "name": "Torrance High Cheerleaders Nationals",
+    "description": "Help the Torrance Cheerleaders get to Nationals!",
+    "fundingCurrency": "ETH",
+    "fundingGoal": "50",
+    "amount": "0",
+    "endDate": "1517443200",
+    "numOfFunders": "0",
+    "active": true
+  },
+  {
+    "name": "PCBL Marlins Summer BBQ",
+    "description": "Pitch in for the greatest fish BBQ put on by your PCBL Marlins",
+    "fundingCurrency": "ETH",
+    "fundingGoal": "2",
+    "amount": "3",
+    "endDate": "1498867200",
+    "numOfFunders": "25",
+    "active": false
+  }
+]

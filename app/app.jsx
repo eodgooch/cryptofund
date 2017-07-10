@@ -1,27 +1,28 @@
 // Import the page's CSS. Webpack will know what to do with it.
-import "../stylesheets/app.css";
+import "./stylesheets/app.css";
 
 // Import libraries we need.
+import React from "react";
+import ReactDOM from "react-dom";
 import { default as Web3} from 'web3';
 import { default as contract } from 'truffle-contract'
+import { default as data } from 'json/fake-data.json'
 
 import crowdfund_artifacts from '../../build/contracts/Crowdfund.json'
 
 var Crowdfund = contract(crowdfund_artifacts);
 
-// The following code is simple to show off interacting with your contracts.
-// As your needs grow you will likely need to change its form and structure.
-// For application bootstrapping, check out window.addEventListener below.
-var accounts;
-var account;
-
 window.App = {
   start: function() {
     var self = this;
+    var fundData = data;
 
     Crowdfund.setProvider(web3.currentProvider);
 
-  },
+
+
+    ReactDOM.render(<App changeSets = {fundData} />, document.getElementById('container'));
+  }
 
 };
 
