@@ -1,29 +1,10 @@
-# truffle-init-webpack
-Example webpack project with Truffle. Includes contracts, migrations, tests, user interface and webpack build pipeline.
+# Cryptofund API
 
-## Usage
+Cryptofund is a micro crowd-funding smart contract that allows users to raise money in the form of Ethereum. A user creates
+a campaign and notifies other Ethereum users to pay into the fund. When the fund reaches it's goal or some expiration time
+the amount paid into the fund is distributed to the creator of the campaign. There is a 1% fee of the funding goal associated
+with utilizing the Cryptofund contract.
 
-To initialize a project with this exapmple, run `truffle init webpack` inside an empty directory.
+This contract is open-source and protected by MIT license. You may create your own application and utilize the Cryptofund
+smart contract. The smart contract is available on the test net.
 
-## Building and the frontend
-
-1. First run `truffle compile`, then run `truffle migrate` to deploy the contracts onto your network of choice (default "development").
-1. Then run `npm run dev` to build the app and serve it on http://localhost:8080
-
-## Possible upgrades
-
-* Use the webpack hotloader to sense when contracts or javascript have been recompiled and rebuild the application. Contributions welcome!
-
-## Common Errors
-
-* **Error: Can't resolve '../build/contracts/MetaCoin.json'**
-
-This means you haven't compiled or migrated your contracts yet. Run `truffle compile` and `truffle migrate` first.
-
-Full error:
-
-```
-ERROR in ./app/main.js
-Module not found: Error: Can't resolve '../build/contracts/MetaCoin.json' in '/Users/tim/Documents/workspace/Consensys/test3/app'
- @ ./app/main.js 11:16-59
-```

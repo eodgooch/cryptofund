@@ -16,10 +16,10 @@ contract Crowdfund {
 
   // campaign
   struct Campaign {
-	  address beneficiary; // benefactor of the campaign
+    address beneficiary; // benefactor of the campaign
     uint fundingGoal; // end goal
-	  uint numFunders; // number of funders to the campaign
-	  uint amount; // current amount backing campaign
+    uint numFunders; // number of funders to the campaign
+    uint amount; // current amount backing campaign
     uint endDate; // ending date time in seconds from epoch
     bool isActive; // is the campaign active
     mapping (address => Funder) funders;
@@ -59,16 +59,16 @@ contract Crowdfund {
   // payout the beneficiary
   function payout(uint campaignID) payable {
     Campaign c = campaigns[campaignID];
+    uint fee = c.fundingGoal / 100; // 1% fee
+    c.amount = c.amount - fee;
     if (c.amount >= c.fundingGoal) {
-      uint fee = c.fundingGoal / 100; // 1% fee
-      c.amount = c.amount - fee;
       cryptofund.transfer(fee);
       c.beneficiary.transfer(c.amount);
     } else {
-//    this.applyRefund(c);
+      // apply a refund
+
     }
     c.isActive = false;
-    //cryptofund.send(msg.gas);
   }
 
   // has the campaign reached it's goal?
