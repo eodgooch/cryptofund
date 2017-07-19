@@ -16,12 +16,12 @@ contract Crowdfund {
 
   // campaign
   struct Campaign {
-    address beneficiary; // benefactor of the campaign
-    uint fundingGoal; // end goal
-    uint numFunders; // number of funders to the campaign
-    uint amount; // current amount backing campaign
-    uint endDate; // ending date time in seconds from epoch
-    bool isActive; // is the campaign active
+    address beneficiary;// benefactor of the campaign
+    uint fundingGoal;   // end goal
+    uint numFunders;    // number of funders to the campaign
+    uint amount;        // current amount backing campaign
+    uint endDate;       // ending date time in seconds from epoch
+    bool isActive;      // is the campaign active
     mapping (address => Funder) funders;
   }
 
@@ -73,25 +73,9 @@ contract Crowdfund {
     }
   }
 
-  // has the campaign reached it's goal?
-//	function checkGoalReached(Campaign c) private returns (bool reached) {
-//    return c.amount >= c.fundingGoal;
-//	}
-
-//  function fee(Campaign c) internal returns (uint fee) {
-//    //cryptofund.send(amount); //1% fee
-//    //cryptofund.send(msg.gas);
-//    return (c.fundingGoal / 100);
-//  }
-
   // remove the campaign (mark it unactive)
   function deleteCampaign(Campaign c) internal {
     c.isActive = false;
   }
-
-  // todo
-  // would like to provide a percentage based return policy
-//  function applyRefund(Campaign campaign) private {
-//  }
 
 }

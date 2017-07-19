@@ -1,4 +1,4 @@
-# Cryptofund API
+# Cryptofund Smart Contract
 
 Cryptofund is a micro crowd-funding smart contract that allows users to raise money in the form of Ethereum. A user creates
 a campaign and notifies other Ethereum users to pay into the fund. When the fund reaches it's goal or some expiration time
