@@ -7,8 +7,8 @@ module.exports = {
       network_id: '*' // Match any network id
     },
     integration: {
-      host: 'localhost',
-      port: 9545,
+      host: '10.1.225.121',
+      port: 8545,
       network_id: '*' // Match any network id
     }
   }

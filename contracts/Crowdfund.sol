@@ -57,18 +57,20 @@ contract Crowdfund {
   }
 
   // payout the beneficiary
-  function payout(uint campaignID) payable {
-    Campaign c = campaigns[campaignID];
-    uint fee = c.fundingGoal / 100; // 1% fee
-    c.amount = c.amount - fee;
-    if (c.amount >= c.fundingGoal) {
-      cryptofund.transfer(fee);
-      c.beneficiary.transfer(c.amount);
-    } else {
-      // apply a refund
+  function payout(uint campaignID, address admin) payable {
+    if (admin == cryptofund) {
+      Campaign c = campaigns[campaignID];
+      uint fee = c.fundingGoal / 100; // 1% fee
+      c.amount = c.amount - fee;
+      if (c.amount >= c.fundingGoal) {
+        cryptofund.transfer(fee);
+        c.beneficiary.transfer(c.amount);
+      } else {
+        // apply a refund
 
+      }
+      c.isActive = false;
     }
-    c.isActive = false;
   }
 
   // has the campaign reached it's goal?
